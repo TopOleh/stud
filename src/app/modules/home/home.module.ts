@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { SharedModule } from 'app/shared/shared.module';
+import { CourseModule } from 'app/modules/courses/course.module';
 
 import { HomeComponent } from './components';
 
@@ -9,7 +10,8 @@ import { HomeComponent } from './components';
   declarations: [HomeComponent],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    CourseModule
   ],
   exports: [HomeComponent]
 })

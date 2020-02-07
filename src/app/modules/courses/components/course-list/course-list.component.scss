@@ -1,0 +1,17 @@
+@import 'src/assets/scss/variables';
+
+.stud-courses {
+    
+    &__add {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__add-button {
+        background-color: $dark-sky-blue-bg;
+        border: none;
+        border-radius: 3px;
+        color: $white-font;
+        padding: 10px;
+    }
+}
