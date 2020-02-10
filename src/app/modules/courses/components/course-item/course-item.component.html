@@ -1,17 +1,17 @@
 <article class="stud-course">
     <div class="stud-course__info">
         <header class="stud-course__header">
-            <h2 class="stud-course__title">Title</h2>
+        <h2 class="stud-course__title">{{course.title}}</h2>
             <div class="stud-course__parameters">
-                <time class="stud-course__duration">Duration: 1h 28min</time>
-                <time class="stud-course__date">Date: 9Nov, 2018</time >
+                <time class="stud-course__duration">Duration: {{course.duration}}</time>
+                <time class="stud-course__date">Date: {{course.creationDate}}</time >
             </div>
         </header>
-        <p class="stud-course__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore, eaque? Sint, cum? Ullam ducimus dolorum itaque quidem esse illum consectetur corrupti dignissimos explicabo, quis beatae, odio autem. Nemo, facilis vitae.</p>
+        <p class="stud-course__description">{{course.description}}</p>
     </div>
 
     <div class="stud-course__actions">
         <button class="stud-course-edit">Edit</button>
-        <button class="stud-course-delete">Delete</button>
+        <button class="stud-course-delete" (click)="delete()">Delete</button>
     </div>
 </article>

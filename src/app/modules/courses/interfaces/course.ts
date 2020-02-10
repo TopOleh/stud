@@ -1,5 +1,6 @@
 export interface Course {
-    id: number;
+    id: string;
+    topRated: boolean;
     title: string;
     creationDate: string;
     duration: number;
@@ -8,7 +9,8 @@ export interface Course {
 
 export class NewCourse implements Course {
     constructor(
-        public id: number,
+        public id: string,
+        public topRated: boolean,
         public title: string,
         public creationDate: string,
         public duration: number,
