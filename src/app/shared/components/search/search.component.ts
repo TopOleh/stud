@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.scss']
 })
-export class SearchComponent implements OnInit {
+export class SearchComponent {
 
-  constructor() { }
-
-  ngOnInit() {
+  findCouse(inputField) {
+    console.log('Search data: ', inputField.value);
   }
-
 }
