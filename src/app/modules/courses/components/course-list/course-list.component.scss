@@ -1,10 +1,10 @@
 @import 'src/assets/scss/variables';
+@import 'src/assets/scss/mixins';
 
 .stud-courses {
     
     &__add {
-        display: flex;
-        justify-content: flex-end;
+        @include flex-layout(center, flex-end);
     }
 
     &__add-button {
@@ -12,6 +12,16 @@
         border: none;
         border-radius: 3px;
         color: $white-font;
+        padding: 10px;
+    }
+
+    &__more {
+        @include flex-layout(center, center);
+        background-color: $white-bg;
+        border-radius: 6px;
+        box-shadow: $slight-shadow;
+        text-decoration: underline;
+        font-size: 0.75rem;
         padding: 10px;
     }
 }

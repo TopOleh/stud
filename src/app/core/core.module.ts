@@ -12,6 +12,6 @@ import { FooterComponent, HeaderComponent } from '.';
     CommonModule,
     SharedModule
   ],
-  exports: [HeaderComponent]
+  exports: [HeaderComponent, FooterComponent]
 })
 export class CoreModule { }

@@ -1,0 +1,14 @@
+@import 'src/assets/scss/variables';
+@import 'src/assets/scss/mixins';
+
+.stud-footer {
+    background-color: $charcoal-grey-bg;
+    color: $silver-font;
+    text-align: right;
+    padding: 20px;
+
+    &__policies {
+        font-style: normal;
+        font-size: 0.875rem;
+    }
+}
