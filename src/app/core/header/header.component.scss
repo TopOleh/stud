@@ -1,0 +1,21 @@
+@import 'src/assets/scss/variables';
+@import 'src/assets/scss/mixins';
+
+.stud-header {
+    @include flex-layout(center, space-between);
+
+    background-color: $dark-grey-bg;
+    padding: 20px;
+}
+
+.stud-header__authorization {
+
+    &-login, &-logout {
+        cursor: pointer;
+        color: $white-font;
+        background-color: transparent;
+        border: none;
+        padding: 5px;
+        margin: 5px;
+    }
+}
