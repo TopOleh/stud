@@ -1,5 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { CourseModule } from 'app/modules/courses/course.module';
+import { SharedModule } from 'app/shared/shared.module';
+
 import { HomeComponent } from './home.component';
 
 describe('HomeComponent', () => {
@@ -8,7 +11,11 @@ describe('HomeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HomeComponent ]
+      declarations: [ HomeComponent ],
+      imports: [
+        CourseModule,
+        SharedModule
+      ]
     })
     .compileComponents();
   }));
@@ -19,7 +26,7 @@ describe('HomeComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create home component', () => {
     expect(component).toBeTruthy();
   });
 });

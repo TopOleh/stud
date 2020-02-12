@@ -19,7 +19,12 @@ describe('BreadcrumbComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create breadcrumbComponent', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should have breadcrumb element', () => {
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('.stud-breadcrumb span').textContent).toContain('Courses');
   });
 });

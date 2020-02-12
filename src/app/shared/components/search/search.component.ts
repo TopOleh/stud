@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-search',
@@ -7,7 +7,7 @@ import { Component, ViewChild } from '@angular/core';
 })
 export class SearchComponent {
 
-  findCouse(inputField) {
+  findCourse(inputField) {
     console.log('Search data: ', inputField.value);
   }
 }

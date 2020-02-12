@@ -19,7 +19,22 @@ describe('FakeLogoComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create fake-logo Component', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should have img', () => {
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('img')).toBeTruthy();
+  });
+
+  it('img should contain alt text', () => {
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('img').alt).not.toBe('');
+  });
+
+  it('src img should not be empty', () => {
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('img').src).not.toBe('');
   });
 });
