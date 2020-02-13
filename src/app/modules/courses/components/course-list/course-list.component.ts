@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+
 import { Course } from 'app/modules/courses/interfaces/course';
 
 const MOCK_DATA: Course[] = [
