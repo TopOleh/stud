@@ -1,0 +1,90 @@
+{
+    "userData": {
+    "login": "fdsfd",
+    "password": "dfdf",
+    "token": "2e2uh72y3",
+    "isLoggedIn": true
+  },
+  "courses": [
+    {
+      "id": "5db5ab963c703ee7ec7fb12b",
+      "title": "JavaScript Advanced",
+      "topRated": true,
+      "duration": 656,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis aspernatur voluptas voluptatem quaerat saepe natus incidunt quo, vitae, itaque impedit dolore pariatur, possimus aliquam sequi.",
+      "creationDate": "2019-11-15T10:37:49.771Z"
+    },
+    {
+      "id": "5db5ab9688d1f5798bdae16e",
+      "title": "SASS/SCSS",
+      "topRated": false,
+      "duration": 273,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis aspernatur voluptas voluptatem quaerat saepe natus incidunt quo, vitae, itaque impedit dolore pariatur, possimus aliquam sequi.",
+      "creationDate": "2019-11-15T13:16:40.108Z"
+    },
+    {
+      "id": "5db5ab96e35cdf81051d5d8d",
+      "title": "Angular 8",
+      "topRated": true,
+      "duration": 101,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis aspernatur voluptas voluptatem quaerat saepe natus incidunt quo, vitae, itaque impedit dolore pariatur, possimus aliquam sequi.",
+      "creationDate": "2019-10-24T19:25:40.875Z"
+    },
+    {
+      "id": "5db5ab968b56aafd9d082974",
+      "title": "Vue.Js",
+      "topRated": true,
+      "duration": 236,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis aspernatur voluptas voluptatem quaerat saepe natus incidunt quo, vitae, itaque impedit dolore pariatur, possimus aliquam sequi.",
+      "creationDate": "2019-10-27T16:06:51.216Z"
+    },
+    {
+      "id": "5db5ab96bad7386fadc2d57d",
+      "title": "React.Js",
+      "topRated": false,
+      "duration": 841,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis aspernatur voluptas voluptatem quaerat saepe natus incidunt quo, vitae, itaque impedit dolore pariatur, possimus aliquam sequi.",
+      "creationDate": "2019-11-07T11:08:03.663Z"
+    },
+    {
+      "id": "5db5ab963c703ee7ec7fb12b",
+      "title": "JavaScript Advanced",
+      "topRated": true,
+      "duration": 656,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis aspernatur voluptas voluptatem quaerat saepe natus incidunt quo, vitae, itaque impedit dolore pariatur, possimus aliquam sequi.",
+      "creationDate": "2019-11-15T10:37:49.771Z"
+    },
+    {
+      "id": "5db5ab968b56aafd9d082974",
+      "title": "Vue.Js",
+      "topRated": true,
+      "duration": 236,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis aspernatur voluptas voluptatem quaerat saepe natus incidunt quo, vitae, itaque impedit dolore pariatur, possimus aliquam sequi.",
+      "creationDate": "2019-10-27T16:06:51.216Z"
+    },
+    {
+      "id": "5db5ab96bad7386fadc2d57d",
+      "title": "React.Js",
+      "topRated": false,
+      "duration": 841,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis aspernatur voluptas voluptatem quaerat saepe natus incidunt quo, vitae, itaque impedit dolore pariatur, possimus aliquam sequi.",
+      "creationDate": "2019-11-07T11:08:03.663Z"
+    },
+    {
+      "id": "5db5ab963c703ee7ec7fb12b",
+      "title": "JavaScript Advanced",
+      "topRated": true,
+      "duration": 656,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis aspernatur voluptas voluptatem quaerat saepe natus incidunt quo, vitae, itaque impedit dolore pariatur, possimus aliquam sequi.",
+      "creationDate": "2019-11-15T10:37:49.771Z"
+    },
+    {
+      "id": "5db5ab9688d1f5798bdae16e",
+      "title": "SASS/SCSS",
+      "topRated": false,
+      "duration": 273,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis aspernatur voluptas voluptatem quaerat saepe natus incidunt quo, vitae, itaque impedit dolore pariatur, possimus aliquam sequi.",
+      "creationDate": "2019-11-15T13:16:40.108Z"
+    }
+  ]
+}
