@@ -51,4 +51,22 @@ describe('CourseListComponent', () => {
       expect(loadMoreLink.textContent).toBe('LOAD MORE');
     });
   });
+
+  describe('DeleteCourse', () => {
+    it('should call onDelete clicking on delete button', () => {
+      spyOn(component, 'onDelete');
+      const courseItem: HTMLElement = compiled.querySelector('app-course-item');
+      const deleteButton: HTMLButtonElement = courseItem.querySelector('.stud-course-delete');
+      deleteButton.click();
+      expect(component.onDelete).toHaveBeenCalled();
+    });
+
+    it('should call onDelete with course ID', () => {
+      spyOn(console, 'log');
+      const courseItem: HTMLElement = compiled.querySelector('app-course-item');
+      const deleteButton: HTMLButtonElement = courseItem.querySelector('.stud-course-delete');
+      deleteButton.click();
+      expect(console.log).toHaveBeenCalledWith('Delete course id:', component.courses[0].id);
+    });
+  });
 });

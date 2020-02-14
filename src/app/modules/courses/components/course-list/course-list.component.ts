@@ -103,7 +103,7 @@ const MOCK_DATA: Course[] = [
 export class CourseListComponent {
   courses: Course[] = MOCK_DATA;
 
-  onDelete(courseId): void {
+  onDelete(courseId: string): void {
     console.log('Delete course id:', courseId);
   }
 }
