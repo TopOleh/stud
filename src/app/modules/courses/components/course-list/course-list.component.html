@@ -2,8 +2,18 @@
     <div class="stud-courses__add">
         <button class="stud-courses__add-button">+ Add course</button>
     </div>
-    <app-course-item *ngFor="let course of courses" [course]="course" (deleteCourse)="onDelete($event)"></app-course-item>
+    <ng-container *ngIf="courses; else noCourseData">
+      <app-course-item
+      *ngFor="let course of courses"
+      [course]="course"
+      (deleteCourse)="onDelete($event)"
+      appFreshCourse
+      creationDate="{{course.creationDate}}"
+      ></app-course-item>
+    </ng-container>
     <div class="stud-courses__more">
-        <a href="#">LOAD MORE</a>
+      <a href="#">LOAD MORE</a>
     </div>
-</section>
+  </section>
+
+  <ng-template #noCourseData>No data. Feel free to add new couse</ng-template>

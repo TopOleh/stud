@@ -10,7 +10,7 @@ const MOCK_DATA: Course[] = [
     duration: 656,
     // tslint:disable-next-line: max-line-length
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis aspernatur voluptas voluptatem quaerat saepe natus incidunt quo, vitae, itaque impedit dolore pariatur, possimus aliquam sequi.',
-    creationDate: '2019-11-15T10:37:49.771Z'
+    creationDate: '2020-02-15T10:37:49.771Z'
   },
   {
     id: '5db5ab9688d1f5798bdae16e',
@@ -19,7 +19,7 @@ const MOCK_DATA: Course[] = [
     duration: 273,
     // tslint:disable-next-line: max-line-length
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis aspernatur voluptas voluptatem quaerat saepe natus incidunt quo, vitae, itaque impedit dolore pariatur, possimus aliquam sequi.',
-    creationDate: '2019-11-15T13:16:40.108Z'
+    creationDate: '2020-02-15T13:16:40.108Z'
   },
   {
     id: '5db5ab96e35cdf81051d5d8d',
@@ -73,7 +73,7 @@ const MOCK_DATA: Course[] = [
     duration: 841,
     // tslint:disable-next-line: max-line-length
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis aspernatur voluptas voluptatem quaerat saepe natus incidunt quo, vitae, itaque impedit dolore pariatur, possimus aliquam sequi.',
-    creationDate: '2019-11-07T11:08:03.663Z'
+    creationDate: '2020-11-07T11:08:03.663Z'
   },
   {
     id: '5db5ab963c703ee7ec7fb12b',
@@ -91,7 +91,7 @@ const MOCK_DATA: Course[] = [
     duration: 273,
     // tslint:disable-next-line: max-line-length
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis aspernatur voluptas voluptatem quaerat saepe natus incidunt quo, vitae, itaque impedit dolore pariatur, possimus aliquam sequi.',
-    creationDate: '2019-11-15T13:16:40.108Z'
+    creationDate: '2020-11-15T13:16:40.108Z'
   }
 ];
 
