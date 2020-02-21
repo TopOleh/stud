@@ -2,53 +2,53 @@
 @import 'src/assets/scss/mixins';
 
 .stud-course {
-    display: flex;
-    background-color: $white-bg;
-    box-shadow: $slight-shadow;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 15px 0;
+  display: flex;
+  background-color: $white-bg;
+  box-shadow: $slight-shadow;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 15px 0;
 
-    &__info {
-        flex-basis: 70%;
-    }
+  &__info {
+    flex-basis: 70%;
+  }
 
-    &__header {
-        @include flex-layout(center, space-between);
-    }
+  &__header {
+    @include flex-layout(center, space-between);
+  }
 
-    &__title {
-        font-size: 1.5rem;
-    }
+  &__title {
+    font-size: 1.5rem;
+  }
 
-    &__parameters {
-        color: $cloudy-blue-font;
-        font-size: 0.75rem;
-    }
+  &__parameters {
+    color: $cloudy-blue-font;
+    font-size: 0.75rem;
+  }
 
-    &__duration {
-        margin-right: 15px;
-    }
+  &__duration {
+    margin-right: 15px;
+  }
 
-    &__description {
-        color: $slate-grey-font;
-        font-size: 0.875rem;
-        line-height: 1.71;
-    }
+  &__description {
+    color: $slate-grey-font;
+    font-size: 0.875rem;
+    line-height: 1.71;
+  }
 
-    &__actions {
-        flex-basis: 30%;
-        @include flex-layout(center, center)
-    }
+  &__actions {
+    flex-basis: 30%;
+    @include flex-layout(center, center)
+  }
 
-    &-edit, &-delete {
-        background-color: $dark-sky-blue-bg;
-        border: none;
-        border-radius: 3px;
-        color: $white-font;
-        font-size: 0.75rem;
-        flex-basis: 30%;
-        padding: 5px 10px;
-        margin: 5px;
-    }
+  &-edit, &-delete {
+    background-color: $dark-sky-blue-bg;
+    border: none;
+    border-radius: 3px;
+    color: $white-font;
+    font-size: 0.75rem;
+    flex-basis: 30%;
+    padding: 5px 10px;
+    margin: 5px;
+  }
 }

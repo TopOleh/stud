@@ -1,8 +1,13 @@
+<section class="stud-course-search">
+  <input #searchInput type="text" class="stud-course-search__input" placeholder="Text to search" />
+  <button class="stud-course-search__button" (click)="findCourses(searchInput.value)">Search</button>
+</section>
+
 <section class="stud-courses">
     <div class="stud-courses__add">
         <button class="stud-courses__add-button">+ Add course</button>
     </div>
-    <ng-container *ngIf="courses; else noCourseData">
+    <ng-container *ngIf="courses.length; else noCourseData">
       <app-course-item
       *ngFor="let course of courses"
       [course]="course"
@@ -16,4 +21,8 @@
     </div>
   </section>
 
-  <ng-template #noCourseData>No data. Feel free to add new couse</ng-template>
+  <ng-template #noCourseData>
+    <div class="stud-courses__empty">
+      No data. Feel free to add new couse
+    </div>
+  </ng-template>

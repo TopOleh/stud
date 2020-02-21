@@ -1,14 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { FakeLogoComponent, BreadcrumbComponent, SearchComponent } from './components';
-
+import { FakeLogoComponent, BreadcrumbComponent } from './components';
 
 @NgModule({
-  declarations: [FakeLogoComponent, BreadcrumbComponent, SearchComponent],
+  declarations: [FakeLogoComponent, BreadcrumbComponent],
   imports: [
     CommonModule
   ],
-  exports: [FakeLogoComponent, BreadcrumbComponent, SearchComponent]
+  exports: [FakeLogoComponent, BreadcrumbComponent]
 })
 export class SharedModule { }

@@ -6,7 +6,7 @@
           <span *ngIf="course.topRated">Top</span>
         </h2>
             <div class="stud-course__parameters">
-                <time class="stud-course__duration">Duration: {{course.duration}}</time>
+                <time class="stud-course__duration">Duration: {{course.duration | courseDuration}}</time>
                 <time class="stud-course__date">Date: {{course.creationDate | date: "d MMM, y"}}</time >
             </div>
         </header>
