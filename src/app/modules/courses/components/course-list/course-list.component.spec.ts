@@ -2,6 +2,8 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CourseListComponent } from './course-list.component';
 import { CourseItemComponent } from '../course-item/course-item.component';
+import { SearchPipe } from '../../pipes/search.pipe';
+import { CourseDurationPipe } from '../../pipes/course-date.pipe';
 
 describe('CourseListComponent', () => {
   let component: CourseListComponent;
@@ -9,14 +11,13 @@ describe('CourseListComponent', () => {
   let compiled: HTMLElement;
 
   beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ CourseListComponent, CourseItemComponent ]
-    })
-    .compileComponents();
+    fixture = TestBed.configureTestingModule({
+      declarations: [CourseListComponent, CourseItemComponent, CourseDurationPipe],
+      providers: [SearchPipe]
+    }).createComponent(CourseListComponent);
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CourseListComponent);
     component = fixture.componentInstance;
     compiled = fixture.debugElement.nativeElement;
 
