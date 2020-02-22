@@ -6,12 +6,10 @@ import { HomeModule } from './modules/home/home.module';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { SearchPipe } from './modules/courses/pipes/search.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    SearchPipe
+    AppComponent
   ],
   imports: [
     BrowserModule,
