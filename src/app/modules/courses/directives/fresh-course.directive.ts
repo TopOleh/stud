@@ -9,7 +9,7 @@ export class FreshCourseDirective implements OnChanges {
 
   private borderColor = 'none';
 
-  constructor(private elRef: ElementRef, private renderer: Renderer2) {}
+  constructor(private elRef: ElementRef, private renderer: Renderer2) { }
 
   ngOnChanges() {
     this.setBorderColor();
@@ -18,7 +18,7 @@ export class FreshCourseDirective implements OnChanges {
   setBorderColor() {
     const currentDate: number = Date.now();
     const creationDate: number = new Date(this.creationDate).getTime();
-    const twoWeeks: number = new Date( +new Date() - 12096e5).getTime();
+    const twoWeeks: number = new Date(+new Date() - 12096e5).getTime();
 
     if (creationDate < currentDate && creationDate >= twoWeeks) {
       this.renderer.setStyle(this.elRef.nativeElement.firstChild, 'border', '1px solid green');
