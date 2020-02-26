@@ -1,9 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
 
-import { CourseListComponent } from './course-list.component';
-import { CourseItemComponent } from '../course-item/course-item.component';
-import { SearchPipe } from '../../pipes/search.pipe';
-import { CourseDurationPipe } from '../../pipes/course-date.pipe';
+import { CourseListComponent, CourseItemComponent } from '../';
+import { SearchPipe, CourseDurationPipe } from '../../pipes';
+import { FreshCourseDirective } from '../../directives';
+import { MOCK_DATA } from 'assets/mock/db';
 
 describe('CourseListComponent', () => {
   let component: CourseListComponent;
@@ -12,7 +13,7 @@ describe('CourseListComponent', () => {
 
   beforeEach(async(() => {
     fixture = TestBed.configureTestingModule({
-      declarations: [CourseListComponent, CourseItemComponent, CourseDurationPipe],
+      declarations: [CourseListComponent, CourseItemComponent, CourseDurationPipe, FreshCourseDirective, SearchPipe],
       providers: [SearchPipe]
     }).createComponent(CourseListComponent);
   }));
@@ -26,6 +27,10 @@ describe('CourseListComponent', () => {
 
   it('should create course list component', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should load MOCK_DATA', () => {
+    expect(MOCK_DATA).toBeTruthy();
   });
 
   describe('AddButton', () => {
@@ -68,6 +73,42 @@ describe('CourseListComponent', () => {
       const deleteButton: HTMLButtonElement = courseItem.querySelector('.stud-course-delete');
       deleteButton.click();
       expect(console.log).toHaveBeenCalledWith('Delete course id:', component.courses[0].id);
+    });
+  });
+
+  describe('Search', () => {
+    let searchButton: HTMLButtonElement;
+    let searchInput: HTMLInputElement;
+
+    beforeEach(() => {
+      searchButton = fixture.debugElement.query(By.css('.stud-course-search__button')).nativeElement;
+      searchInput = fixture.debugElement.query(By.css('.stud-course-search__input')).nativeElement;
+    });
+
+    it('should call findCourses on search', () => {
+      spyOn(component, 'findCourses');
+      searchButton.click();
+
+      expect(component.findCourses).toHaveBeenCalled();
+    });
+
+    it('should call findCourses with course name "java" ', () => {
+      spyOn(component, 'findCourses');
+      searchInput.value = 'java';
+
+      searchButton.click();
+
+      expect(component.findCourses).toHaveBeenCalledWith('java');
+    });
+
+    it('should left courses only with "java" name ', () => {
+      spyOn(component, 'findCourses').and.callThrough();
+      component.findCourses('java');
+      fixture.detectChanges();
+
+      fixture.whenStable().then(() => {
+        expect(component.courses.length).toEqual(3);
+      });
     });
   });
 });

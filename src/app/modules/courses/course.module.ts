@@ -9,7 +9,13 @@ import { SearchPipe } from './pipes/search.pipe';
 
 
 @NgModule({
-  declarations: [CourseListComponent, CourseItemComponent, FreshCourseDirective, CourseDurationPipe],
+  declarations: [
+    CourseListComponent,
+    CourseItemComponent,
+    FreshCourseDirective,
+    CourseDurationPipe,
+    SearchPipe
+  ],
   imports: [
     CommonModule,
     SharedModule
