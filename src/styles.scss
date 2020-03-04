@@ -1,20 +1,30 @@
-html, body {
-    height: 100%;
-    position: relative;
+html,
+body {
+  height: 100%;
+  position: relative;
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: SourceSansPro;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-button, a {
-    text-decoration: none;
-    background-color: transparent;
+button,
+a {
+  text-decoration: none;
+  background-color: transparent;
 
-    &:focus {
-        outline: none;
-    }
+  &:focus {
+    outline: none;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
