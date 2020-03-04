@@ -12,19 +12,6 @@
     Search
   </button>
 </section>
-<ng-container *ngIf="isAdding">
-  <section class="stud-adding">
-    <form (ngSubmit)="addCourse()" [formGroup]="courseForm">
-      <input type="text" formControlName="title" />
-      <input type="text" formControlName="creationDate" />
-      <input type="text" formControlName="duration" />
-      <input type="text" formControlName="description" />
-      <button type="submit" [disabled]="!courseForm.valid">
-        Save
-      </button>
-    </form>
-  </section>
-</ng-container>
 <section class="stud-courses">
   <div class="stud-courses__add">
     <button class="stud-courses__add-button" (click)="onAddCourse()">

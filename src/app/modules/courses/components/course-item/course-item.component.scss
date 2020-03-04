@@ -1,5 +1,5 @@
-@import 'src/assets/scss/variables';
-@import 'src/assets/scss/mixins';
+@import "src/assets/scss/variables";
+@import "src/assets/scss/mixins";
 
 .stud-course {
   display: flex;
@@ -38,10 +38,12 @@
 
   &__actions {
     flex-basis: 30%;
-    @include flex-layout(center, center)
+    @include flex-layout(center, center);
   }
 
-  &-edit, &-delete {
+  &-edit,
+  &-delete {
+    cursor: pointer;
     background-color: $dark-sky-blue-bg;
     border: none;
     border-radius: 3px;

@@ -1,5 +1,5 @@
-@import 'src/assets/scss/variables';
-@import 'src/assets/scss/mixins';
+@import "src/assets/scss/variables";
+@import "src/assets/scss/mixins";
 
 .stud-course-search {
   display: flex;
@@ -26,6 +26,7 @@
   }
 
   &__add-button {
+    cursor: pointer;
     background-color: $dark-sky-blue-bg;
     border: none;
     border-radius: 3px;

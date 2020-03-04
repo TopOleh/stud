@@ -1,0 +1,12 @@
+<h2>New course</h2>
+<section class="stud-adding">
+  <form (ngSubmit)="addCourse()" [formGroup]="courseForm">
+    <input type="text" formControlName="title" />
+    <input type="text" formControlName="creationDate" />
+    <input type="text" formControlName="duration" />
+    <input type="text" formControlName="description" />
+    <button type="submit" [disabled]="!courseForm.valid">
+      Save
+    </button>
+  </form>
+</section>
