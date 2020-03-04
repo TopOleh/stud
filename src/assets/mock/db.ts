@@ -1,4 +1,4 @@
-export const MOCK_DATA = [
+export let MOCK_DATA = [
   {
     id: '5db5ab963c703ee7ec7fb12b',
     title: 'JavaScript Advanced',

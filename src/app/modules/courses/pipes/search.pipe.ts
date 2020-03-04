@@ -7,7 +7,7 @@ import { Course } from '../interfaces/course';
 export class SearchPipe implements PipeTransform {
 
   transform(courses: Course[], name: string): Course[] {
-    return courses.filter((course: Course) => course.title.toLowerCase().indexOf(name.toLowerCase()) !== -1);
+    return name ? courses.filter((course: Course) => course.title.toLowerCase().indexOf(name.toLowerCase()) !== -1) : courses;
   }
 
 }

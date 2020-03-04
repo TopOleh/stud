@@ -1,28 +1,52 @@
 <section class="stud-course-search">
-  <input #searchInput type="text" class="stud-course-search__input" placeholder="Text to search" />
-  <button class="stud-course-search__button" (click)="findCourses(searchInput.value)">Search</button>
+  <input
+    #searchInput
+    type="text"
+    class="stud-course-search__input"
+    placeholder="Text to search"
+  />
+  <button
+    class="stud-course-search__button"
+    (click)="findCourses(searchInput.value)"
+  >
+    Search
+  </button>
 </section>
-
+<ng-container *ngIf="isAdding">
+  <section class="stud-adding">
+    <form (ngSubmit)="addCourse()" [formGroup]="courseForm">
+      <input type="text" formControlName="title" />
+      <input type="text" formControlName="creationDate" />
+      <input type="text" formControlName="duration" />
+      <input type="text" formControlName="description" />
+      <button type="submit" [disabled]="!courseForm.valid">
+        Save
+      </button>
+    </form>
+  </section>
+</ng-container>
 <section class="stud-courses">
-    <div class="stud-courses__add">
-        <button class="stud-courses__add-button">+ Add course</button>
-    </div>
-    <ng-container *ngIf="courses.length; else noCourseData">
-      <app-course-item
+  <div class="stud-courses__add">
+    <button class="stud-courses__add-button" (click)="onAddCourse()">
+      + Add course
+    </button>
+  </div>
+  <ng-container *ngIf="courses.length; else noCourseData">
+    <app-course-item
       *ngFor="let course of courses"
       [course]="course"
       (deleteCourse)="onDelete($event)"
       appFreshCourse
-      creationDate="{{course.creationDate}}"
-      ></app-course-item>
-    </ng-container>
-    <div class="stud-courses__more">
-      <a href="#">LOAD MORE</a>
-    </div>
-  </section>
+      creationDate="{{ course.creationDate }}"
+    ></app-course-item>
+  </ng-container>
+  <div class="stud-courses__more">
+    <a href="#">LOAD MORE</a>
+  </div>
+</section>
 
-  <ng-template #noCourseData>
-    <div class="stud-courses__empty">
-      No data. Feel free to add new couse
-    </div>
-  </ng-template>
+<ng-template #noCourseData>
+  <div class="stud-courses__empty">
+    No data. Feel free to add new couse
+  </div>
+</ng-template>

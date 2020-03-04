@@ -1,9 +1,10 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 
 import { Course } from 'app/modules/courses/interfaces/course';
-// Change on remote DB !!!!
-import { MOCK_DATA } from 'assets/mock/db';
+
 import { SearchPipe } from '../../pipes/search.pipe';
+import { CourseService } from '../../services/course.service';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-course-list',
@@ -12,20 +13,39 @@ import { SearchPipe } from '../../pipes/search.pipe';
 })
 export class CourseListComponent implements OnInit {
   courses: Course[];
+  isAdding: boolean;
+  courseForm = new FormGroup({
+    title: new FormControl('', Validators.required),
+    creationDate: new FormControl('', Validators.required),
+    duration: new FormControl('', Validators.required),
+    description: new FormControl('', Validators.required)
+  });
 
-  @ViewChild('searchInput', {static: true}) searchInput: HTMLInputElement;
+  @ViewChild('searchInput', { static: true }) searchInput: HTMLInputElement;
 
-  constructor(private search: SearchPipe) {}
+  constructor(private search: SearchPipe, private courseService: CourseService) { }
 
-  ngOnInit() {
-    this.courses = MOCK_DATA;
+  ngOnInit(): void {
+    this.courses = this.courseService.getCourses();
   }
 
   onDelete(courseId: string): void {
-    console.log('Delete course id:', courseId);
+    if (confirm('Are you sure, you want delete the course?')) {
+      this.courses = this.courseService.removeCourse(courseId);
+    }
+  }
+
+  onAddCourse(): void {
+    this.isAdding = true;
+    console.log('this.courseForm :', this.courseForm);
+  }
+
+  addCourse(): void {
+    console.log('form :', this.courseForm.valid);
   }
 
   findCourses(name: string): void {
-    this.courses = name ? this.search.transform(MOCK_DATA, name) : MOCK_DATA;
+    const allCourses = this.courseService.getCourses();
+    this.courses = this.search.transform(allCourses, name);
   }
 }

@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
+
+import { SharedModule } from 'app/shared/shared.module';
 
 import { CourseListComponent, CourseItemComponent } from './components';
-import { FreshCourseDirective } from './directives/fresh-course.directive';
-import { CourseDurationPipe } from './pipes/course-date.pipe';
-import { SharedModule } from 'app/shared/shared.module';
-import { SearchPipe } from './pipes/search.pipe';
+
+import { FreshCourseDirective } from './directives';
+import { CourseDurationPipe, SearchPipe } from './pipes';
 
 
 @NgModule({
@@ -18,6 +20,7 @@ import { SearchPipe } from './pipes/search.pipe';
   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     SharedModule
   ],
   exports: [CourseListComponent],
