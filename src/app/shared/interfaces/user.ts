@@ -1,9 +1,8 @@
 export interface User {
-    id: number;
-    firstName: string;
-    lastName: string;
+    email: string;
+    password: string;
 }
 
 export class NewUser implements User {
-    constructor(public id: number, public firstName: string, public lastName: string) {}
+    constructor(public email: string, public password: string) {}
 }
