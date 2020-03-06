@@ -5,6 +5,7 @@ export interface Course {
     creationDate: string;
     duration: number;
     description: string;
+    authors: string;
 }
 
 export class NewCourse implements Course {
@@ -14,5 +15,6 @@ export class NewCourse implements Course {
         public title: string,
         public creationDate: string,
         public duration: number,
-        public description: string) {}
+        public description: string,
+        public authors: string) {}
 }

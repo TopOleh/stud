@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { CourseService } from '../../services/course.service';
+import { Course } from '../../interfaces/course';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-course-add',
@@ -10,16 +13,23 @@ export class CourseAddComponent implements OnInit {
 
   courseForm: FormGroup;
 
+  constructor(
+    private courseService: CourseService,
+    private router: Router
+    ) {}
+
   ngOnInit(): void {
     this.courseForm = new FormGroup({
       title: new FormControl('', Validators.required),
       creationDate: new FormControl('', Validators.required),
       duration: new FormControl('', Validators.required),
-      description: new FormControl('', Validators.required)
+      description: new FormControl('', Validators.required),
+      authors: new FormControl('', Validators.required)
     });
   }
 
-  addCourse(): void {
-    console.log('Add');
+  addCourse(course: Course): void {
+    this.courseService.createCourse(course);
+    this.router.navigate(['home', 'courses']);
   }
 }

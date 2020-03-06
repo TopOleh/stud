@@ -1,18 +1,34 @@
 <h2>New course</h2>
 <section class="stud-adding">
-  <form (ngSubmit)="addCourse()" [formGroup]="courseForm">
+  <form (ngSubmit)="addCourse(courseForm.value)" [formGroup]="courseForm">
     <mat-form-field class="stud-adding__input">
+      <mat-label>Title</mat-label>
       <input matInput type="text" formControlName="title" />
     </mat-form-field>
+
     <mat-form-field class="stud-adding__input">
-      <input matInput type="text" formControlName="creationDate" />
+      <mat-label>Description</mat-label>
+      <textarea matInput formControlName="description"></textarea>
     </mat-form-field>
+
+
     <mat-form-field class="stud-adding__input">
-      <input matInput type="text" formControlName="duration" />
+      <mat-label>Duration</mat-label>
+      <input matInput type="number" formControlName="duration" />
     </mat-form-field>
+
     <mat-form-field class="stud-adding__input">
-      <input matInput type="text" formControlName="description" />
+      <mat-label>Date</mat-label>
+      <input matInput type="date" formControlName="creationDate" />
     </mat-form-field>
+
+    <mat-form-field class="stud-adding__input">
+      <mat-label>Authors</mat-label>
+      <input matInput type="text" formControlName="authors" />
+    </mat-form-field>
+
+    <a mat-raised-button routerLink="../courses">Back</a>
+
     <button mat-raised-button
       type="submit"
       class="stud-adding__button"

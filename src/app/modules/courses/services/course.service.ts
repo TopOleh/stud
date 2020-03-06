@@ -10,7 +10,8 @@ let MOCK_DATA = [
     duration: 656,
     // tslint:disable-next-line: max-line-length
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis aspernatur voluptas voluptatem quaerat saepe natus incidunt quo, vitae, itaque impedit dolore pariatur, possimus aliquam sequi.',
-    creationDate: '2020-02-15T10:37:49.771Z'
+    creationDate: '2020-02-15T10:37:49.771Z',
+    authors: 'Topa'
   },
   {
     id: '5db5ab9688d1f5798bdae16e',
@@ -19,7 +20,8 @@ let MOCK_DATA = [
     duration: 273,
     // tslint:disable-next-line: max-line-length
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis aspernatur voluptas voluptatem quaerat saepe natus incidunt quo, vitae, itaque impedit dolore pariatur, possimus aliquam sequi.',
-    creationDate: '2020-02-15T13:16:40.108Z'
+    creationDate: '2020-02-15T13:16:40.108Z',
+    authors: 'Ola'
   },
   {
     id: '5db5ab96e35cdf81051d5d8d',
@@ -28,7 +30,8 @@ let MOCK_DATA = [
     duration: 101,
     // tslint:disable-next-line: max-line-length
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis aspernatur voluptas voluptatem quaerat saepe natus incidunt quo, vitae, itaque impedit dolore pariatur, possimus aliquam sequi.',
-    creationDate: '2019-10-24T19:25:40.875Z'
+    creationDate: '2019-10-24T19:25:40.875Z',
+    authors: 'Gogi'
   },
   {
     id: '5db5ab968b56aafd9d082974',
@@ -37,7 +40,8 @@ let MOCK_DATA = [
     duration: 236,
     // tslint:disable-next-line: max-line-length
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis aspernatur voluptas voluptatem quaerat saepe natus incidunt quo, vitae, itaque impedit dolore pariatur, possimus aliquam sequi.',
-    creationDate: '2019-10-27T16:06:51.216Z'
+    creationDate: '2019-10-27T16:06:51.216Z',
+    authors: 'Garik'
   },
   {
     id: '5db5ab96bad7386fadc2d57d',
@@ -46,7 +50,8 @@ let MOCK_DATA = [
     duration: 841,
     // tslint:disable-next-line: max-line-length
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis aspernatur voluptas voluptatem quaerat saepe natus incidunt quo, vitae, itaque impedit dolore pariatur, possimus aliquam sequi.',
-    creationDate: '2019-11-07T11:08:03.663Z'
+    creationDate: '2019-11-07T11:08:03.663Z',
+    authors: 'Ihor'
   },
   {
     id: '5db5ab963c703ee7ec7fb12b',
@@ -55,7 +60,8 @@ let MOCK_DATA = [
     duration: 656,
     // tslint:disable-next-line: max-line-length
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis aspernatur voluptas voluptatem quaerat saepe natus incidunt quo, vitae, itaque impedit dolore pariatur, possimus aliquam sequi.',
-    creationDate: '2019-11-15T10:37:49.771Z'
+    creationDate: '2019-11-15T10:37:49.771Z',
+    authors: 'Dima'
   },
   {
     id: '5db5ab968b56aafd9d082974',
@@ -64,7 +70,8 @@ let MOCK_DATA = [
     duration: 236,
     // tslint:disable-next-line: max-line-length
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis aspernatur voluptas voluptatem quaerat saepe natus incidunt quo, vitae, itaque impedit dolore pariatur, possimus aliquam sequi.',
-    creationDate: '2019-10-27T16:06:51.216Z'
+    creationDate: '2019-10-27T16:06:51.216Z',
+    authors: 'Vitalik'
   },
   {
     id: '5db5ab96bad7386fadc2d57d',
@@ -73,7 +80,8 @@ let MOCK_DATA = [
     duration: 841,
     // tslint:disable-next-line: max-line-length
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis aspernatur voluptas voluptatem quaerat saepe natus incidunt quo, vitae, itaque impedit dolore pariatur, possimus aliquam sequi.',
-    creationDate: '2020-11-07T11:08:03.663Z'
+    creationDate: '2020-11-07T11:08:03.663Z',
+    authors: 'Ivan'
   },
   {
     id: '5db5ab963c703ee7ec7fb12b',
@@ -82,7 +90,8 @@ let MOCK_DATA = [
     duration: 656,
     // tslint:disable-next-line: max-line-length
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis aspernatur voluptas voluptatem quaerat saepe natus incidunt quo, vitae, itaque impedit dolore pariatur, possimus aliquam sequi.',
-    creationDate: '2019-11-15T10:37:49.771Z'
+    creationDate: '2019-11-15T10:37:49.771Z',
+    authors: 'Andrew'
   },
   {
     id: '5db5ab9688d1f5798bdae16e',
@@ -91,7 +100,8 @@ let MOCK_DATA = [
     duration: 273,
     // tslint:disable-next-line: max-line-length
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis aspernatur voluptas voluptatem quaerat saepe natus incidunt quo, vitae, itaque impedit dolore pariatur, possimus aliquam sequi.',
-    creationDate: '2020-11-15T13:16:40.108Z'
+    creationDate: '2020-11-15T13:16:40.108Z',
+    authors: 'Ivanka'
   }
 ];
 
