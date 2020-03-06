@@ -1,0 +1,19 @@
+<h1>Login</h1>
+<mat-form-field>
+  <mat-label>
+    Email
+  </mat-label>
+  <input #emailInput matInput type="email">
+</mat-form-field>
+<mat-form-field>
+  <mat-label>
+    Password
+  </mat-label>
+  <input #passwordInput matInput type="password">
+</mat-form-field>
+
+<button #loginButton
+  mat-raised-button
+  color="primary"
+  (click)="onLogIn()"
+  disabled>Log in</button>
