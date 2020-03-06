@@ -1,10 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 
-// Material
-import { MatDialog } from '@angular/material/dialog';
-
-import { DialogAddCourseComponent } from '../dialog-add-course/dialog-add-course.component';
-
 import { CourseService } from '../../services/course.service';
 
 import { SearchPipe } from '../../pipes';
@@ -24,8 +19,7 @@ export class CourseListComponent implements OnInit {
 
   constructor(
     private search: SearchPipe,
-    private courseService: CourseService,
-    private dialog: MatDialog) { }
+    private courseService: CourseService) { }
 
   ngOnInit(): void {
     this.courses = this.courseService.getCourses();
@@ -35,10 +29,6 @@ export class CourseListComponent implements OnInit {
     if (confirm('Are you sure, you want delete the course?')) {
       this.courses = this.courseService.removeCourse(courseId);
     }
-  }
-
-  onAddCourse(): void {
-    this.dialog.open(DialogAddCourseComponent);
   }
 
   findCourses(name: string): void {

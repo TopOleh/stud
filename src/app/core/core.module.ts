@@ -1,15 +1,13 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 import { SharedModule } from '../shared/shared.module';
 
-import { FooterComponent, HeaderComponent, PageNotFoundComponent } from '.';
+import { FooterComponent, HeaderComponent, CORE_COMPONENTS } from '.';
 
 
 @NgModule({
-  declarations: [FooterComponent, HeaderComponent, PageNotFoundComponent],
+  declarations: [...CORE_COMPONENTS],
   imports: [
-    CommonModule,
     SharedModule
   ],
   exports: [HeaderComponent, FooterComponent]

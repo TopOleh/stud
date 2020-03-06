@@ -1,33 +1,26 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
-
-// Material
-import { MatDialogModule } from '@angular/material/dialog';
+import { RouterModule } from '@angular/router';
 
 import { SharedModule } from 'app/shared/shared.module';
 
 import { FreshCourseDirective } from './directives';
 import { CourseDurationPipe, SearchPipe } from './pipes';
-import { CourseItemComponent, CourseListComponent } from './components';
-import { DialogAddCourseComponent } from './components/dialog-add-course/dialog-add-course.component';
+
+import { COURSE_COMPONENTS } from './components';
 
 @NgModule({
   declarations: [
-    CourseListComponent,
-    CourseItemComponent,
-    DialogAddCourseComponent,
+    ...COURSE_COMPONENTS,
     FreshCourseDirective,
     CourseDurationPipe,
-    SearchPipe,
+    SearchPipe
   ],
   imports: [
-    CommonModule,
     ReactiveFormsModule,
     SharedModule,
-    MatDialogModule
+    RouterModule
   ],
-  exports: [CourseListComponent],
   providers: [SearchPipe]
 })
 export class CourseModule { }
