@@ -8,12 +8,12 @@ import { NewUser } from 'app/shared/interfaces/user';
   templateUrl: './log-in.component.html',
   styleUrls: ['./log-in.component.scss']
 })
-export class LogInComponent implements OnInit {
-  private isFilled: boolean
+export class LogInComponent {
+  private isFilled: boolean;
 
-  @ViewChild('passwordInput', {static: true}) password: ElementRef;
-  @ViewChild('emailInput', {static: true}) email: ElementRef;
-  @ViewChild('loginButton', {static: true}) logInButton: MatButton;
+  @ViewChild('passwordInput', { static: true }) password: ElementRef;
+  @ViewChild('emailInput', { static: true }) email: ElementRef;
+  @ViewChild('loginButton', { static: true }) logInButton: MatButton;
 
   @HostListener('keyup', ['$event'])
   handleKeydown(): void {
@@ -22,9 +22,6 @@ export class LogInComponent implements OnInit {
   }
 
   constructor(private auth: AuthentificationService) { }
-
-  ngOnInit(): void {
-  }
 
   onLogIn(): void {
     if (this.isFilled) {

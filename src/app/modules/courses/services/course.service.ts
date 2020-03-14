@@ -124,6 +124,7 @@ export class CourseService {
   }
 
   updateCourse(course: Course): Course[] {
+    // TODO: Write properly
     return MOCK_DATA = [...MOCK_DATA, course];
   }
 

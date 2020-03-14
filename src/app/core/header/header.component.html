@@ -1,7 +1,15 @@
 <section class="stud-header">
-    <app-fake-logo></app-fake-logo>
-    <div class="stud-header__authorization">
-        <button class="stud-header__authorization-login" routerLink="log-in">User login</button>
-        <button class="stud-header__authorization-logout" (click)="logOut()">Log off</button>
-    </div>
+  <app-fake-logo></app-fake-logo>
+  <div class="stud-header__authorization">
+    <ng-container *ngIf="isLoggedin; else logIn">
+      <button class="stud-header__authorization-logout" (click)="logOut()">
+        Log off
+      </button>
+    </ng-container>
+    <ng-template #logIn>
+      <button class="stud-header__authorization-login" routerLink="log-in">
+        User login
+      </button>
+    </ng-template>
+  </div>
 </section>

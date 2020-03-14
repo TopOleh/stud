@@ -1,0 +1,27 @@
+@import "src/assets/scss/variables";
+
+.stud-auth {
+  background-color: $white-bg;
+  border-radius: 6px;
+  box-shadow: $slight-shadow;
+  padding: 20px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+
+  &__field {
+    width: 100%;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__forgot {
+    color: $soft-blue-font;
+    text-decoration: underline;
+  }
+}
